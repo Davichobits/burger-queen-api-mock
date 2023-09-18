@@ -1,35 +1,39 @@
-# Burger Queen API Mock
+## Deploy JSON Server to Vercel
 
-Usando las librerías [json-server](https://github.com/typicode/json-server) 
-y [json-server-auth](https://github.com/jeremyben/json-server-auth) 
-se crea un mock para 
-[Burger Queen API](https://app.swaggerhub.com/apis/ssinuco/BurgerQueenAPI/2.0.0)
+A template to deploy [JSON Server](https://github.com/typicode/json-server) to [Vercel](https://vercel.com), allow you to run fake REST API online!
 
-## Ejecución
+Demo from this repository: 
 
-1. Clona el repositorio
-2. Instala las dependencias
-    ```bash
-    npm install
-    ```
-3. Ejecuta el mock
-    ```bash
-    npm start
-    ```
-4. Ahora puedes acceder a los endpoints del API descritos en la 
-[documentación](https://app.swaggerhub.com/apis/ssinuco/BurgerQueenAPI/2.0.0) 
-usando como URL base [http://localhost:8080/](http://localhost:8080/).
+1. https://json-server-in.vercel.app
+2. https://json-server-in.vercel.app/api/posts
 
-    Tal como indica la documentación, los endpoints están protegidos 
-    por token de autenticación.
+![Powered by Vercel](https://images.ctfassets.net/e5382hct74si/78Olo8EZRdUlcDUFQvnzG7/fa4cdb6dc04c40fceac194134788a0e2/1618983297-powered-by-vercel.svg)
 
-    En el archivo [requests.http](./requests.http) encuentras 
-    algunas peticiones de prueba que puedes ejecutar directamente 
-    en VSCode usando la extensión 
-    [REST Client](https://marketplace.visualstudio.com/items?itemName=humao.rest-client).
+### How to use
 
-## Información
+1. Click "**Use this template**" or clone this repository.
+2. Update or use the default [`db.json`](./db.json) in the repository.
+3. Sign Up or login into [Vercel](https://vercel.com).
+4. From the Vercel dashboard, click "**+ New Project**" then "**Import**" your repository.
+5. In the "**Configure Project**" screen, leave everything default and click "**Deploy**".
+6. Wait until deployment is done, and your own JSON server is ready to serve!
 
-El mock _out-of-the-box_ provee información de 2 usuarias administradoras _anita.borg@systers.xyz_ y _grace.hopper@systers.xyz_. La contraseña de ambos usuarios es _123456_
+## Default `db.json`
 
-También provee información de 2 órdenes y 2 productos.
+```json
+{
+  "posts": [
+    { "id": 1, "title": "json-server", "author": "typicode" }
+  ],
+  "comments": [
+    { "id": 1, "body": "some comment", "postId": 1 }
+  ],
+  "profile": { "name": "typicode" }
+}
+```
+
+## Reference
+
+1. https://github.com/typicode/json-server
+2. https://vercel.com
+3. https://shadowsmith.com/how-to-deploy-an-express-api-to-vercel
